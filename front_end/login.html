@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Student Attendance Management Portal</title>
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <img src="images/college-logo.png"
+             alt="College Logo"
+             class="logo">
+
+        <h2>Student Attendance Management Portal</h2>
+
+        <p>
+            Welcome back! Please sign in using your registered email and password.
+        </p>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required>
+
+            </div>
+            
+            <div class="options">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="rememberMe">
+
+                    Remember Me
+
+            </div>
+
+           
+            <button type="submit">
+
+                Login
+
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

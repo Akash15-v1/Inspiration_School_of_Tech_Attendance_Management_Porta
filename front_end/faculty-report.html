@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Attendance Report</title>
+    <link rel="stylesheet" href="css/student-report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Chart.js for rendering the interactive data visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Attendance Portal</h2>
+        <ul>
+            <li>
+                <a href="faculty-dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="mark-attendance.html">
+                    <i class="fa-solid fa-user-check"></i>
+                    Mark Attendance
+                </a>
+            </li>
+            <li>
+                <a href="view-attendance.html">
+                    <i class="fas fa-calendar-alt"></i>
+                    View Attendance
+                </a>
+            </li>
+            <li class="active">
+                <a href="faculty-report.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reports
+                </a>
+            </li>
+            <li>
+                <a href="faculty-profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="logout(); return false;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <div class="topbar">
+            <h1>Faculty Attendance Report</h1>
+        </div>
+
+        <!-- Faculty Profile Information -->
+        <section class="card">
+            <h2>Faculty Details</h2>
+            <div class="details">
+                <p><strong>Name :</strong> <span id="facultyName">Loading...</span></p>
+                <p><strong>Department :</strong> <span id="department">Loading...</span></p>
+                <p><strong>Subject :</strong> <span id="subject">Loading...</span></p>
+                <p><strong>Total Students :</strong> <span id="students">Loading...</span></p>
+            </div>
+        </section>
+
+        <!-- Dynamic Summary Cards -->
+        <section class="summary-cards">
+            <div class="summary-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>Total Students</h3>
+                <h2 id="totalStudents">...</h2>
+            </div>
+
+            <div class="summary-card">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Total Classes</h3>
+                <h2 id="totalClasses">...</h2>
+            </div>
+
+            <div class="summary-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Average Attendance</h3>
+                <h2 id="averageAttendance">...</h2>
+            </div>
+        </section>
+
+        <!-- Dynamic Student Attendance Table -->
+        <section class="card">
+            <h2>Student Attendance Breakdown</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Attendance</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                    <tr>
+                        <td colspan="4" style="text-align: center;">Fetching students list from API...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Low Attendance Flag List (<75%) -->
+        <section class="card">
+            <h2>Students Below 75% (Critical Action Required)</h2>
+            <ul id="lowAttendanceList">
+                <li>Scanning records...</li>
+            </ul>
+        </section>
+
+        <!-- Charts Container -->
+        <section class="chart-container">
+            <div class="chart-card">
+                <h2>Attendance Distribution</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h2>Individual Student Percentages</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+
+       
+    </main>
+
+</div>
+
+<!-- Core Script Modules -->
+<script src="js/logout.js"></script>
+<script src="js/faculty-report.js"></script>
+
+</body>
+</html>

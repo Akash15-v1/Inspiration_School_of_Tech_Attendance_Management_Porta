@@ -1,0 +1,290 @@
+/* ===========================
+   General
+=========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(rgba(13,110,253,.75),rgba(13,110,253,.75)),
+    url("../images/background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/* ===========================
+   Login Container
+=========================== */
+
+.login-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+/* ===========================
+   Login Card
+=========================== */
+
+.login-card{
+
+    background:white;
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+    text-align:center;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.login-card h2{
+
+    color:#0d6efd;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+
+}
+
+/* ===========================
+   Description
+=========================== */
+
+.login-card p{
+
+    color:#555;
+
+    margin-bottom:15px;
+
+    line-height:1.5;
+
+}
+
+/* ===========================
+   Input Fields
+=========================== */
+
+.input-group{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:15px;
+
+}
+
+.input-group input:focus{
+
+    border-color:#0d6efd;
+
+    outline:none;
+
+}
+
+/* ===========================
+   Remember Me
+=========================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+
+}
+
+.options a{
+
+    text-decoration:none;
+
+    color:#0d6efd;
+
+}
+
+.options a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+button{
+
+    width:100%;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#084298;
+
+}
+
+/* ===========================
+   Message
+=========================== */
+
+#message{
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   Demo Credentials
+=========================== */
+
+.demo-box{
+
+    margin-top:30px;
+
+    padding:15px;
+
+    background:#eef5ff;
+
+    border-radius:8px;
+
+    text-align:left;
+
+}
+
+.demo-box h4{
+
+    color:#0d6efd;
+
+    margin-bottom:10px;
+
+}
+
+.demo-box p{
+
+    margin:3px 0;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:500px){
+
+.login-card{
+
+    width:95%;
+
+    padding:25px;
+
+}
+
+.login-card h2{
+
+    font-size:22px;
+
+}
+
+}

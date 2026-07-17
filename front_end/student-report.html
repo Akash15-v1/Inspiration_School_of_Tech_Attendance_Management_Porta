@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Report</title>
+    <link rel="stylesheet" href="css/student-report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Attendance Portal</h2>
+        <ul>
+            <li><a href="student-dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="attendance-history.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
+            <li class="active"><a href="student-report.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+            <li><a href="student-profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="topbar">
+            <h1>Attendance Report</h1>
+        </div>
+
+        <!-- Student Details -->
+        <section class="card">
+            <h2>Student Information</h2>
+            <div class="details">
+                <p><strong>Name :</strong> <span id="studentName">Loading...</span></p>
+                <p><strong>Roll No :</strong> <span id="rollNumber">Loading...</span></p>
+                <p><strong>Department :</strong> <span id="department">Loading...</span></p>
+                <p><strong>Overall Attendance :</strong> <span id="overallAttendance">Loading...</span></p>
+            </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="summary-cards">
+            <div class="summary-card">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Present</h3>
+                <h2 id="presentCount">0</h2>
+            </div>
+            <div class="summary-card">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <h3>Absent</h3>
+                <h2 id="absentCount">0</h2>
+            </div>
+            <div class="summary-card">
+                <i class="fa-solid fa-book"></i>
+                <h3>Subjects</h3>
+                <h2 id="subjectCount">0</h2>
+            </div>
+        </section>
+
+        <!-- Subject-wise Attendance -->
+        <section class="card">
+            <h2>Subject-wise Attendance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Attendance (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="reportTable">
+                    <!-- Loaded dynamically via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Charts -->
+        <section class="chart-container">
+            <div class="chart-card">
+                <h2>Attendance Distribution</h2>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Subject-wise Graph</h2>
+                <canvas id="barChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="buttons">
+            
+            <button class="btn" onclick="exportCSV()">
+                <i class="fa-solid fa-file-csv"></i> Export CSV
+            </button>
+        </section>
+    </main>
+</div>
+
+<script src="js/logout.js"></script>
+<script src="js/student-report.js"></script>
+</body>
+</html>

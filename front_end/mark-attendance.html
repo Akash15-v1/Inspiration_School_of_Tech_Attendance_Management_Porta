@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Attendance</h2>
+        <ul>
+            <li><a href="faculty-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li class="active"><a href="mark-attendance.html"><i class="fas fa-user-check"></i> Mark Attendance</a></li>
+            <li><a href="view-attendance.html"><i class="fas fa-calendar-alt"></i> View Attendance</a></li>
+            <li><a href="faculty-report.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+            <li><a href="faculty-profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="logout(); return false;"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>Mark Attendance</h2>
+        </header>
+
+        <section class="table-section">
+            <h3>Class Details</h3>
+            <br>
+            <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                <div>
+                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Subject</label>
+                    <input type="text" id="subjectDisplay" readonly placeholder="Fetching Subject..." style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; background: #e9ecef; width: 220px; font-weight: bold;">
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h3>Student List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                    <tr>
+                        <td colspan="3" style="text-align: center; color: #777;">Loading students...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button class="btn-action" onclick="submitAttendance()">Submit Attendance</button>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/logout.js"></script>
+<script src="js/mark-attendance.js"></script>
+
+</body>
+</html>
