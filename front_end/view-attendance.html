@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Attendance</h2>
+        <ul>
+            <li><a href="faculty-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="mark-attendance.html"><i class="fas fa-user-check"></i> Mark Attendance</a></li>
+            <li class="active"><a href="view-attendance.html"><i class="fas fa-eye"></i> View Attendance</a></li>
+            <li><a href="faculty-report.html"><i class="fas fa-chart-bar"></i> Reports</a></li>
+            <li><a href="faculty-profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="logout(); return false;"><i class="fas fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>View Attendance</h2>
+        </header>
+
+        <!-- Attendance Records Section -->
+        <section class="table-section">
+            <h3 id="table-title">Attendance Records (Loading Subject...)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable">
+                    <tr>
+                        <td colspan="5" style="text-align: center;">Fetching live records...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/logout.js"></script>
+<script src="js/view-attendance.js"></script>
+</body>
+
+</html>

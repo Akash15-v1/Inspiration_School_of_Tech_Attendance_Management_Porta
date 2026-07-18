@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <h2>Attendance</h2>
+        <ul>
+            <li><a href="student-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="attendance-history.html"><i class="fas fa-calendar-check"></i> Attendance</a></li>
+            <li><a href="student-report.html"><i class="fas fa-chart-pie"></i> Reports</a></li>
+            <li><a href="student-profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="logout()"><i class="fas fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <h2>Student Dashboard</h2>
+            <span>Welcome, <strong id="welcome-name">Loading...</strong></span>
+        </header>
+
+        <section class="student-info">
+            <div class="card"><h3>Student Name</h3><p id="student-name">Loading...</p></div>
+            <div class="card"><h3>Roll Number</h3><p id="roll-number">Loading...</p></div>
+            <div class="card"><h3>Department</h3><p id="department">Loading...</p></div>
+            <div class="card"><h3>Attendance</h3><p id="attendance-percent">Loading...</p></div>
+        </section>
+
+        <section class="table-section">
+            <h3>Classes</h3>
+            <table id="classes-table">
+                <tr><th>Subject</th><th>Faculty</th><th>Time</th></tr>
+                <!-- Rows will be injected here by JS -->
+            </table>
+        </section>
+    </main>
+</div>
+<script src="js/student_dashboard.js"></script>
+<script src="js/logout.js"></script>
+</body>
+</html>

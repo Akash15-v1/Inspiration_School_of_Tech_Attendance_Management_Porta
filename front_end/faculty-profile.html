@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Styling to make read-only elements clean and professional */
+        .profile-info-group {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+        .profile-info-group label {
+            display: block;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        .profile-info-group p {
+            font-size: 1.1rem;
+            color: #111;
+            margin: 0;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Attendance Portal</h2>
+        <ul>
+            <li>
+                <a href="faculty-dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="mark-attendance.html">
+                    <i class="fa-solid fa-user-check"></i>
+                    Mark Attendance
+                </a>
+            </li>
+            <li>
+                <a href="view-attendance.html">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    View Attendance
+                </a>
+            </li>
+            <li>
+                <a href="faculty-report.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Reports
+                </a>
+            </li>
+            <li class="active">
+                <a href="faculty-profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="logout(); return false;">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <div class="topbar">
+            <h2>Faculty Profile</h2>
+        </div>
+
+        <div class="table-section">
+            <div id="profile-container">
+                <div class="profile-info-group">
+                    <label>Faculty Name</label>
+                    <p id="name">Loading...</p>
+                </div>
+
+                <div class="profile-info-group">
+                    <label>Employee ID</label>
+                    <p id="employeeId">Loading...</p>
+                </div>
+
+                <div class="profile-info-group">
+                    <label>Email</label>
+                    <p id="email">Loading...</p>
+                </div>
+
+                <div class="profile-info-group">
+                    <label>Phone Number</label>
+                    <p id="phone">Loading...</p>
+                </div>
+
+                <div class="profile-info-group">
+                    <label>Department</label>
+                    <p id="department">Loading...</p>
+                </div>
+
+                <div class="profile-info-group">
+                    <label>Subject Handling</label>
+                    <p id="subject">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Core Script Modules -->
+<script src="js/logout.js"></script>
+<script src="js/faculty-profile.js"></script>
+
+</body>
+</html>

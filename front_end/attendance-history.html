@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance History</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Attendance</h2>
+        <ul>
+            <li><a href="student-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="attendance-history.html"><i class="fas fa-calendar-check"></i> Attendance History</a></li>
+            <li><a href="student-report.html"><i class="fas fa-chart-pie"></i> Reports</a></li>
+            <li><a href="student-profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="topbar">
+            <h2>Attendance History</h2>
+        </header>
+
+        <!-- Attendance Table -->
+        <section class="table-section">
+            <h3>Attendance Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTable">
+                    <!-- Loaded dynamically via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+
+<script src="js/attendance.js"></script>
+</body>
+</html>

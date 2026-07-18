@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Simple styling to make info values look uniform and clean */
+        .info-value {
+            display: block;
+            padding: 8px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Attendance Portal</h2>
+        <ul>
+            <li><a href="student-dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+            <li><a href="attendance-history.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a></li>
+            <li><a href="student-report.html"><i class="fa-solid fa-chart-column"></i> Reports</a></li>
+            <li class="active"><a href="student-profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="logout(); return false;"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="topbar">
+            <h2>Student Profile</h2>
+        </div>
+
+        <div class="table-section">
+            <div class="profile-details">
+                
+                <!-- Student Name -->
+                <div class="input-group">
+                    <label>Student Name</label>
+                    <span id="name" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Roll Number -->
+                <div class="input-group">
+                    <label>Roll Number</label>
+                    <span id="roll" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Email -->
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <span id="email" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <span id="phone" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Department -->
+                <div class="input-group">
+                    <label>Department</label>
+                    <span id="department" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Year -->
+                <div class="input-group">
+                    <label>Year</label>
+                    <span id="year" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Section -->
+                <div class="input-group">
+                    <label>Section</label>
+                    <span id="section" class="info-value">Loading...</span>
+                </div>
+
+                <!-- Overall Attendance -->
+                <div class="input-group">
+                    <label>Overall Attendance</label>
+                    <span id="attendance" class="info-value">Loading...</span>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/student-profile.js"></script>
+</body>
+</html>

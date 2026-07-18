@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Attendance</h2>
+        <ul>
+            <li class="active"><a href="faculty-dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="mark-attendance.html"><i class="fas fa-user-check"></i> Mark Attendance</a></li>
+            <li><a href="view-attendance.html"><i class="fas fa-calendar-alt"></i> View Attendance</a></li>
+            <li><a href="faculty-report.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+            <li><a href="faculty-profile.html"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="#" onclick="logout(); return false;"><i class="fas fa-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>Faculty Dashboard</h2>
+            <span>Welcome, <strong id="welcome-name">Loading...</strong></span>
+        </header>
+
+        <!-- Faculty Information Cards -->
+        <section class="student-info">
+
+            <div class="card">
+                <h3>Faculty Name</h3>
+                <p id="fac-name">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Department</h3>
+                <p id="fac-dept">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Subjects</h3>
+                <p id="fac-subject">Loading...</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Classes Today</h3>
+                <p id="total-classes">1</p>
+            </div>
+
+        </section>
+
+        <!-- Today's Schedule Table -->
+        <section class="table-section">
+            <h3>Classes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Section</th>
+                        <th>Time</th>
+                        <th>Room</th>
+                    </tr>
+                </thead>
+                <tbody id="classes-table-body">
+                    <tr>
+                        <td id="subject-t">loading </td>
+                        <td>CSE</td>
+                        <td>09:30 AM</td>
+                        <td>Lab-2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    
+
+        </section>
+
+    </main>
+</div>
+
+<!-- Scripts -->
+<script src="js/logout.js"></script>
+<script src="js/faculty-dashboard.js"></script>
+</body>
+</html>
